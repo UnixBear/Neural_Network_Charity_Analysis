@@ -9,6 +9,8 @@ Preprocessing the data for the neural network, Compile,train and evaluate the mo
 ## Results
 
 ### Data Preprocessing
+
+The categorical data we want to predict is whether the charity was met its goals, which is represented in the tabular data with the "IS_SUCCESSFUL" column. Therefore, we drop it.
 After looking at the data, I established that the target variable is the "IS_SUCCESSFUL" column. I then removed the "EIN" and "NAME" columns as they did not offer any relevant data that could help the model perform better. The remaining columns became the features for the model.
 
 ### Compiling, Training, and Evaluating the Model
