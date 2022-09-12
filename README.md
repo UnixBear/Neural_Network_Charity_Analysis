@@ -10,15 +10,18 @@ Preprocessing the data for the neural network, Compile,train and evaluate the mo
 
 ### Data Preprocessing
 
-The categorical data we want to predict is whether the charity was met its goals, which is represented in the tabular data with the "IS_SUCCESSFUL" column. Therefore, we drop it.
-After looking at the data, I established that the target variable is the "IS_SUCCESSFUL" column. I then removed the "EIN" and "NAME" columns as they did not offer any relevant data that could help the model perform better. The remaining columns became the features for the model.
+The categorical data we want to predict is whether the charity was met its goals, which is represented in the tabular data with the "IS_SUCCESSFUL" column. Therefore, we drop it. The "EIN" and "NAME" columns were removed as they don't offer any relevant data that could help the model perform better. The remaining columns became the features for the model.
 
 ### Compiling, Training, and Evaluating the Model
-For my first attempt at compiling a neuron network consisted of 8 neurons in the first layer and 6 in the second. Both layers had relu activation functions and the output layer had a sigmoid activation function. I started with these parameters as relu does better with nonlinear data, and two layers allows for a second layer to reweight the inputs from the first layer. Here are the preformance metrics of this model.
-
-### Charts
+We have 5 layers with respectively [60,70,50,40,10] neurons respectively in their layers. All layers had relu activation functions and the output layer had a sigmoid activation function. I started with these parameters as relu does better with nonlinear data
 
 ## Summary
+
+![accuracy](./resources/accuracy.png)
+
+![loss](./resources/loss.png)
+
+It's about 50% accurate which means the high amount of neurons had no impact on the success of the model, and it's not particularly effective to begin with. If I were to redo this, I would attempt a random forest classification model.
 
 
 
@@ -27,13 +30,4 @@ For my first attempt at compiling a neuron network consisted of 8 neurons in the
 A helpful checklist to gauge how your README is coming on what I would like to finish:
 
 - [ ] Improve the Data Processing.
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+- [ ] Compare to Random Forest.
